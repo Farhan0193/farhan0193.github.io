@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LuminaVubon | Technology News</title>
+
+<meta name="description" content="Latest Technology News, AI, Cybersecurity, Gadgets, Innovation and Digital World updates from LuminaVubon.">
+
+<meta name="keywords" content="Technology, AI, Cybersecurity, Gadgets, Programming, Tech News">
+
+<meta name="robots" content="index,follow">
+
+<meta name="author" content="LuminaVubon">
+
+<link rel="icon" href="favicon.png">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="progress-bar"></div>
+
+<header class="header">
+
+<div class="container">
+
+<div class="logo-bar">
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<h1>LuminaVubon</h1>
+
+</div>
+
+<div class="header-tools">
+
+<input
+type="text"
+id="searchInput"
+class="search-input"
+placeholder="🔍 Search Technology News...">
+
+<button
+id="searchBtn"
+class="search-btn">
+🔍
+</button>
+
+</div>
+
+<nav class="navbar" id="navbar">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="news.html">📰 News</a>
+
+<a href="technology.html">💻 Technology</a>
+
+<a href="ai-tools.html">🤖 AI Tools</a>
+
+<a href="health.html">❤️ Health</a>
+
+<a href="food.html">🍔 Food</a>
+
+<a href="lifestyle.html">🌿 Lifestyle</a>
+
+<a href="earning-tips.html">💰 Earning Tips</a>
+
+<a href="about.html">ℹ About</a>
+
+<a href="contact.html">📞 Contact</a>
+
+<a href="#" id="darkModeBtn">🌙 Dark</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<h2>💻 Technology World</h2>
+
+<p>
+
+Stay updated with the latest Technology,
+Artificial Intelligence,
+Cybersecurity,
+Programming,
+Mobile,
+Laptop,
+Software,
+Internet and Innovation news from trusted global sources.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#topnews" class="btn btn-primary">
+
+Latest Technology News
+
+</a>
+
+<a href="ai-tools.html" class="btn btn-secondary">
+
+Explore AI Tools
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="featured" id="topnews">
+
+<div class="container">
+
+<h2>🔥 Top Technology News</h2>
+
+<div class="card-container"><div class="card">
+
+<h3>🌍 BBC Technology</h3>
+
+<p>
+Latest global technology news, innovation and digital trends from BBC.
+</p>
+
+<a href="https://www.bbc.com/news/technology"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⚡ Reuters Technology</h3>
+
+<p>
+Breaking technology news, business and AI updates from Reuters.
+</p>
+
+<a href="https://www.reuters.com/technology/"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🚀 TechCrunch</h3>
+
+<p>
+Startup news, AI innovations and the latest technology industry updates.
+</p>
+
+<a href="https://techcrunch.com/"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>💡 The Verge</h3>
+
+<p>
+Technology, gadgets, science, internet culture and AI news.
+</p>
+
+<a href="https://www.theverge.com/tech"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🤖 OpenAI News</h3>
+
+<p>
+Official ChatGPT, GPT models and AI research announcements.
+</p>
+
+<a href="https://openai.com/news/"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🔍 Google AI</h3>
+
+<p>
+Latest Gemini, Search AI and DeepMind updates from Google.
+</p>
+
+<a href="https://blog.google/technology/ai/"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>💻 Microsoft AI</h3>
+
+<p>
+Copilot, Windows and Microsoft AI innovations.
+</p>
+
+<a href="https://news.microsoft.com/"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📱 Android Developers</h3>
+
+<p>
+Android Studio, Android 16 and developer platform updates.
+</p>
+
+<a href="https://developer.android.com/news"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🍎 Apple Newsroom</h3>
+
+<p>
+Official Apple product launches and software announcements.
+</p>
+
+<a href="https://www.apple.com/newsroom/"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🎮 NVIDIA</h3>
+
+<p>
+Latest AI GPUs, RTX graphics cards and AI computing news.
+</p>
+
+<a href="https://blogs.nvidia.com/"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>⚙ Intel</h3>
+
+<p>
+Processors, AI chips and computing technology updates.
+</p>
+
+<a href="https://www.intel.com/content/www/us/en/newsroom/home.html"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>💻 GitHub Blog</h3>
+
+<p>
+GitHub Copilot, open source and software development news.
+</p>
+
+<a href="https://github.blog/"
+target="_blank"
+class="card-btn">
+
+Official Source
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="ad-section">
+
+<div class="container">
+
+<h2>📢 Sponsored Advertisement</h2>
+
+<div class="ad-box">
+
+<!-- Paste Adsterra Banner Code Here -->
+
+</div>
+
+</div>
+
+</section>
+
+<section class="featured">
+
+<div class="container">
+
+<h2>🛒 Featured Technology Product</h2>
+
+<div class="card">
+
+<img src="images/product.jpg"
+alt="Technology Product"
+style="width:100%;border-radius:12px;">
+
+<h3>Recommended Product</h3>
+
+<p>
+
+Replace this card with your AdCombo product,
+Amazon affiliate link,
+or any sponsored product.
+
+</p>
+
+<a href="YOUR_AFFILIATE_LINK"
+target="_blank"
+class="card-btn">
+
+Buy Now
+
+</a>
+
+</div>
+
+</div>
+
+</section><section class="extras">
+
+<div class="container">
+
+<div class="sidebar">
+
+<h2>🌍 Trusted Technology Sources</h2>
+
+<ul>
+
+<li><a href="https://www.bbc.com/news/technology" target="_blank">BBC Technology</a></li>
+
+<li><a href="https://www.reuters.com/technology/" target="_blank">Reuters Technology</a></li>
+
+<li><a href="https://techcrunch.com/" target="_blank">TechCrunch</a></li>
+
+<li><a href="https://www.theverge.com/tech" target="_blank">The Verge</a></li>
+
+<li><a href="https://www.wired.com/" target="_blank">WIRED</a></li>
+
+<li><a href="https://arstechnica.com/" target="_blank">Ars Technica</a></li>
+
+<li><a href="https://www.zdnet.com/" target="_blank">ZDNET</a></li>
+
+<li><a href="https://www.cnet.com/tech/" target="_blank">CNET Tech</a></li>
+
+<li><a href="https://www.engadget.com/" target="_blank">Engadget</a></li>
+
+<li><a href="https://9to5google.com/" target="_blank">9to5Google</a></li>
+
+<li><a href="https://9to5mac.com/" target="_blank">9to5Mac</a></li>
+
+<li><a href="https://www.xda-developers.com/" target="_blank">XDA Developers</a></li>
+
+<li><a href="https://news.google.com/" target="_blank">Google News</a></li>
+
+<li><a href="https://openai.com/news/" target="_blank">OpenAI News</a></li>
+
+<li><a href="https://developer.android.com/news" target="_blank">Android Developers</a></li>
+
+</ul>
+
+</div>
+
+<div class="newsletter">
+
+<h2>📧 Subscribe</h2>
+
+<p>
+
+Get daily Technology, AI and Gadget updates directly in your inbox.
+
+</p>
+
+<input
+type="email"
+placeholder="Enter your email">
+
+<button>
+
+Subscribe
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="featured">
+
+<div class="container">
+
+<h2>⭐ Editor's Picks</h2>
+
+<div class="card-container">
+
+<div class="card">
+
+<h3>🤖 Artificial Intelligence</h3>
+
+<p>
+
+Learn how AI is changing education, business and daily life.
+
+</p>
+
+<a href="ai-tools.html" class="card-btn">
+
+Explore
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🔐 Cybersecurity</h3>
+
+<p>
+
+Protect yourself online with the latest cybersecurity tips.
+
+</p>
+
+<a href="technology.html" class="card-btn">
+
+Read More
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📱 Smartphones</h3>
+
+<p>
+
+Latest Android and iPhone news, reviews and buying guides.
+
+</p>
+
+<a href="technology.html" class="card-btn">
+
+Read More
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-container">
+
+<div class="footer-col">
+
+<h3>LuminaVubon</h3>
+
+<p>
+
+Your trusted digital magazine for Technology, AI, Health, Food, Lifestyle and Online Knowledge.
+
+</p>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Categories</h3>
+
+<a href="news.html">News</a>
+
+<a href="technology.html">Technology</a>
+
+<a href="ai-tools.html">AI Tools</a>
+
+<a href="health.html">Health</a>
+
+<a href="food.html">Food</a>
+
+<a href="lifestyle.html">Lifestyle</a>
+
+<a href="earning-tips.html">Earning Tips</a>
+
+</div>
+
+<div class="footer-col">
+
+<h3>Legal</h3>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="privacy.html">Privacy Policy</a>
+
+<a href="terms.html">Terms of Service</a>
+
+<a href="disclaimer.html">Disclaimer</a>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 LuminaVubon. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
