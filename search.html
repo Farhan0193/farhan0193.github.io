@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Search | LuminaVubon</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container">
+
+<div class="logo-bar">
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<h1>LuminaVubon🌐</h1>
+
+</div>
+
+<div class="header-tools">
+
+<input
+type="text"
+id="searchInput"
+class="search-input"
+placeholder="Search News, AI, Health..."
+
+>
+
+<button id="searchBtn" class="search-btn">
+
+🔍
+
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="featured">
+
+<div class="container">
+
+<h2>🔍 Search Results</h2>
+
+<div id="results"></div>
+
+</div>
+
+</section>
+
+<script>
+
+const searchData=[
+
+{name:"📰 News",url:"news.html",keywords:["news","headline","world"]},
+
+{name:"💻 Technology",url:"technology.html",keywords:["technology","tech","computer"]},
+
+{name:"🤖 AI Tools",url:"ai-tools.html",keywords:["ai","chatgpt","gemini","claude"]},
+
+{name:"❤️ Health",url:"health.html",keywords:["health","fitness","medical"]},
+
+{name:"🍔 Food",url:"food.html",keywords:["food","recipe"]},
+
+{name:"🌿 Lifestyle",url:"lifestyle.html",keywords:["lifestyle","life"]},
+
+{name:"💰 Earning Tips",url:"earning-tips.html",keywords:["earning","income","affiliate"]},
+
+{name:"🌍 BBC News",url:"https://www.bbc.com/news",keywords:["bbc"]},
+
+{name:"🌍 Reuters",url:"https://www.reuters.com/",keywords:["reuters"]},
+
+{name:"🌍 CNN",url:"https://edition.cnn.com/",keywords:["cnn"]},
+
+{name:"🤖 ChatGPT",url:"https://chatgpt.com/",keywords:["chatgpt","openai"]},
+
+{name:"🤖 Google Gemini",url:"https://gemini.google.com/",keywords:["gemini"]},
+
+{name:"💼 Fiverr",url:"https://www.fiverr.com/",keywords:["fiverr"]},
+
+{name:"💼 Upwork",url:"https://www.upwork.com/",keywords:["upwork"]},
+
+{name:"📢 Adsterra",url:"https://adsterra.com/",keywords:["adsterra"]},
+
+{name:"🤝 AdCombo",url:"https://adcombo.com/",keywords:["adcombo"]}
+
+];const results=document.getElementById("results");
+
+function searchSite(){
+
+const keyword=document.getElementById("searchInput").value.toLowerCase().trim();
+
+results.innerHTML="";
+
+if(keyword===""){
+
+results.innerHTML="<div class='card'><p>Type something to search.</p></div>";
+
+return;
+
+}
+
+let found=false;
+
+searchData.forEach(item=>{
+
+if(item.keywords.some(k=>k.includes(keyword)||keyword.includes(k))){
+
+found=true;
+
+results.innerHTML+=`
+
+<div class="card">
+
+<h3>${item.name}</h3>
+
+<p>Click below to open.</p>
+
+<a href="${item.url}" class="card-btn" target="_blank">
+
+Open →
+
+</a>
+
+</div>
+
+`;
+
+}
+
+});
+
+if(!found){
+
+results.innerHTML=`
+
+<div class="card">
+
+<h3>❌ No Result Found</h3>
+
+<p>Try another keyword.</p>
+
+</div>
+
+`;
+
+}
+
+}
+
+document.getElementById("searchBtn").addEventListener("click",searchSite);
+
+document.getElementById("searchInput").addEventListener("keydown",function(e){
+
+if(e.key==="Enter"){
+
+searchSite();
+
+}
+
+});
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
