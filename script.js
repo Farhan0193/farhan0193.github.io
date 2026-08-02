@@ -1,185 +1,110 @@
-// ==========================
+// =========================
+// LuminaVubon v2.0
+// script.js - Part 1
+// =========================
+
 // Mobile Menu
-// ==========================
-
-function toggleMenu(){
-
-const navbar = document.getElementById("navbar");
-
-navbar.classList.toggle("active");
-
+function toggleMenu() {
+    const navbar = document.getElementById("navbar");
+    if (navbar) {
+        navbar.classList.toggle("active");
+    }
 }
 
-
-
-// ==========================
 // Dark Mode
-// ==========================
-
 const darkBtn = document.getElementById("darkModeBtn");
 
-
-if(darkBtn){
-
-darkBtn.addEventListener("click", function(e){
-
-e.preventDefault();
-
-document.body.classList.toggle("dark-mode");
-
-
-
-if(document.body.classList.contains("dark-mode")){
-
-darkBtn.innerHTML="☀️ Light";
-
-localStorage.setItem("theme","dark");
-
+function setTheme(mode) {
+    if (mode === "dark") {
+        document.body.classList.add("dark-mode");
+        if (darkBtn) darkBtn.innerHTML = "☀️ Light";
+    } else {
+        document.body.classList.remove("dark-mode");
+        if (darkBtn) darkBtn.innerHTML = "🌙 Dark";
+    }
+    localStorage.setItem("theme", mode);
 }
 
-else{
+// Load saved theme
+const savedTheme = localStorage.getItem("theme") || "light";
+setTheme(savedTheme);
 
-darkBtn.innerHTML="🌙 Dark";
-
-localStorage.setItem("theme","light");
-
+// Toggle theme
+if (darkBtn) {
+    darkBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const nextTheme = document.body.classList.contains("dark-mode")
+            ? "light"
+            : "dark";
+        setTheme(nextTheme);
+    });
 }
 
-
-});
-
-
-}
-
-
-
-// Save Dark Mode
-
-if(localStorage.getItem("theme") === "dark"){
-
-document.body.classList.add("dark-mode");
-
-
-if(darkBtn){
-
-darkBtn.innerHTML="☀️ Light";
-
-}
-
-}
-
-
-
-
-// ==========================
 // Reading Progress Bar
-// ==========================
+window.addEventListener("scroll", function () {
+    const progress = document.getElementById("progress-bar");
+    if (!progress) return;
 
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
 
-window.addEventListener("scroll",function(){
+    const width = scrollHeight > 0
+        ? (scrollTop / scrollHeight) * 100
+        : 0;
 
-
-let scrollTop = document.documentElement.scrollTop;
-
-let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-
-let progress = (scrollTop / height) * 100;
-
-
-document.getElementById("progress-bar").style.width = progress + "%";
-
-
-});
-
-
-
-
-// ==========================
-// Search Button
-// ==========================
-
+    progress.style.width = width + "%";
+});// =========================
+// Search System
+// =========================
 
 const searchBtn = document.getElementById("searchBtn");
-
-
-if(searchBtn){
-
-
-searchBtn.addEventListener("click",function(){
-
-
-let search = document.getElementById("searchInput").value.toLowerCase();
-
-
-
-if(search.trim() !== ""){
-
-
-window.location.href = "search.html?query=" + search;
-
-
-}
-
-
-});
-
-
-}
-
-
-
-
-// ==========================
-// Enter Key Search
-// ==========================
-
-
 const searchInput = document.getElementById("searchInput");
 
+function performSearch() {
 
-if(searchInput){
+    if (!searchInput) return;
 
+    const query = searchInput.value.trim().toLowerCase();
 
-searchInput.addEventListener("keypress",function(e){
+    if (query === "") {
+        alert("Please enter something to search.");
+        return;
+    }
 
-
-if(e.key === "Enter"){
-
-
-searchBtn.click();
-
-
+    window.location.href =
+        "search.html?query=" + encodeURIComponent(query);
 }
 
-
-});
-
-
+if (searchBtn) {
+    searchBtn.addEventListener("click", performSearch);
 }
 
+if (searchInput) {
+    searchInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+            performSearch();
+        }
+    });
+}
 
+// =========================
+// Newsletter
+// =========================
 
+const newsletterForm = document.querySelector(".newsletter-form");
 
+if (newsletterForm) {
 
-// ==========================
-// Simple Newsletter Alert
-// ==========================
+    newsletterForm.addEventListener("submit", function (e) {
 
+        e.preventDefault();
 
-const subscribeBtn = document.querySelector(".newsletter button");
+        alert("✅ Thanks for subscribing to LuminaVubon!");
 
+        newsletterForm.reset();
 
-if(subscribeBtn){
-
-
-subscribeBtn.addEventListener("click",function(){
-
-
-alert("Thank you for subscribing to LuminaVubon🌐");
-
-
-});
-
+    });
 
 }
