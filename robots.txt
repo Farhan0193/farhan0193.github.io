@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://farhan0193.github.io/LuminaVubon-/sitemap.xml
+Sitemap: https://farhan0193.github.io/Merun-/sitemap.xml
