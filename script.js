@@ -1,5 +1,5 @@
 // =========================
-// LuminaVubon v2.0
+// Merun v2.0
 // script.js - Part 1
 // =========================
 
@@ -101,7 +101,7 @@ if (newsletterForm) {
 
         e.preventDefault();
 
-        alert("✅ Thanks for subscribing to LuminaVubon!");
+        alert("✅ Thanks for subscribing to Merun!");
 
         newsletterForm.reset();
 
